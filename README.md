@@ -1,3 +1,4 @@
+<!-- <<<<<<< HEAD
 # RailsAdmin
 
 [![Gem Version](https://img.shields.io/gem/v/rails_admin.svg)][gem]
@@ -96,3 +97,7 @@ This library aims to support and is [tested against][travis] the following Ruby 
 * [JRuby][]
 
 [jruby]: http://jruby.org/
+=======
+# rolable_rails_admin
+rails_admin with rolable features
+>>>>>>> 2a266da93c03edfb75c2cba13ac981f2ff9d8988 -->

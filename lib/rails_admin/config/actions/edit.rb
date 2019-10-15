@@ -8,6 +8,14 @@ module RailsAdmin
           true
         end
 
+        register_instance_option :show_in_menu do
+          if bindings[:controller].current_user.admin?
+            true
+          else
+            !(bindings[:abstract_model].to_s == 'User')
+          end          
+        end
+
         register_instance_option :http_methods do
           [:get, :put]
         end
