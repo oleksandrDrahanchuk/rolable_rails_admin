@@ -22,7 +22,13 @@ module RailsAdmin
 
           def resource_url(thumb = false)
             return nil unless (uploader = bindings[:object].send(name)).present?
-            thumb.present? ? uploader.send(thumb).url : uploader.url
+            if Rails.env.production?
+              url = 'http://'+request.ip+'/static'
+              image_url = thumb.present? ? url+uploader.send(thumb).url : url+uploader.url
+            else
+              image_url = thumb.present? ? uploader.send(thumb).url : uploader.url
+            end
+            image_url = 
           end
         end
       end
