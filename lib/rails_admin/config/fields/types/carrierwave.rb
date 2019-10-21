@@ -28,7 +28,7 @@ module RailsAdmin
             else
               image_url = thumb.present? ? uploader.send(thumb).url : uploader.url
             end
-            image_url = 
+            'image_url'
           end
         end
       end
